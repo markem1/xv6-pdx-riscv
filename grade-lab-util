@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 import re
 from gradelib import *
@@ -82,5 +82,5 @@ def test_xargs():
 @test(1, "time")
 def test_time():
     check_time()
-    
+
 run_tests()
