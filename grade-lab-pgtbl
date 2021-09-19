@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 import re
 from gradelib import *
@@ -40,7 +40,7 @@ def test_pteprint():
             assert_equal(len(matches[0]), 2)
             pa = (int(matches[0][0], 16) >> 10) << 12
             assert_equal(int(matches[0][1], 16), pa)
-    
+
 @test(5, "answers-pgtbl.txt")
 def test_answers():
     # just a simple sanity check, will be graded manually
@@ -75,7 +75,7 @@ def test_copyin():
 @test(5, "usertests: copyinstr1", parent=test_usertests)
 def test_copyin():
     usertest_check("copyinstr1", "copyinstr2", r.qemu.output)
-    
+
 @test(5, "usertests: copyinstr2",  parent=test_usertests)
 def test_copyinstr2():
     usertest_check("copyinstr2", "copyinstr3", r.qemu.output)
